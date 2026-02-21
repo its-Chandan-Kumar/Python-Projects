@@ -2,6 +2,9 @@
 
 A comprehensive warehouse management system built with Python, Streamlit, and SQLite for tracking products, suppliers, customers, and orders with real-time inventory management.
 
+# Live Demo
+https://warehouse-order-tracking-system.onrender.com
+
 ## 🚀 Features
 
 ### 🔐 Authentication & Security
@@ -48,79 +51,6 @@ A comprehensive warehouse management system built with Python, Streamlit, and SQ
 - **Data Visualization**: Plotly and Altair
 - **Data Processing**: Pandas for data manipulation
 
-## 📋 Prerequisites
-
-Before running this application, ensure you have:
-
-1. **Python 3.8+** installed on your system
-2. **No database server required** - SQLite uses a file-based database
-3. **Git** for cloning the repository
-
-## 🚀 Installation & Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone <repository-url>
-cd warehouse-order-tracking-system
-```
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Database Setup
-
-#### Configure Database Connection
-
-1. Copy the example environment file:
-   ```bash
-   copy env_example.txt .env
-   ```
-   (On Linux/Mac: `cp env_example.txt .env`)
-
-2. Edit the `.env` file with your database configuration:
-   ```env
-   DB_HOST=****
-   DB_USER=root
-   DB_PASSWORD=****
-   DB_NAME=warehouse_tracking
-   DB_PORT=****
-   ```
-
-   **⚠️ Important**: The `.env` file contains sensitive information and is gitignored. Never commit it to version control.
-
-The database will be created automatically when you first run the application.
-
-### 4. Generate Dummy Data (Optional)
-
-To populate the database with sample data for testing:
-
-```bash
-python generate_dummy_data.py
-```
-
-This will create:
-- 5 demo user accounts
-- 10 categories
-- 30 suppliers
-- 40 customers
-- 60 products
-- 35 purchase orders
-- 45 sales orders
-
-**Total: ~210 records**
-
-### 5. Run the Application
-
-```bash
-streamlit run main.py
-```
-
-The application will open in your default web browser at `http://localhost:8501`
-
 ## 🔐 Demo Login Credentials
 
 The system includes several demo accounts for testing:
@@ -133,8 +63,6 @@ The system includes several demo accounts for testing:
 - **Username**: `staff1` | **Password**: `staff123`
 - **Username**: `staff2` | **Password**: `staff123`
 - **Username**: `demo` | **Password**: `demo123`
-
-**⚠️ Important**: These are demo credentials. Please change passwords after first login in a production environment.
 
 ## 📱 Application Structure
 
@@ -193,45 +121,6 @@ The system automatically creates the following tables:
 - **Search & Filter**: Advanced filtering for all data tables
 - **Export Options**: Download data in multiple formats
 
-## 🔧 Configuration Options
-
-### Environment Variables
-The application uses a `.env` file for secure configuration. See `env_example.txt` for the template.
-
-**Password Encryption**: Database passwords are stored securely in the `.env` file and can be encrypted using the encryption key. The password is never hardcoded in the application files.
-
-**Security Note**: 
-- Never commit the `.env` file to version control
-- Change the `ENCRYPTION_KEY` in production
-- Use strong passwords for database access
-
-### Customization
-- Modify `config.py` for application settings
-- Update database queries in individual page files
-- Customize UI themes in Streamlit configuration
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Error**
-   - No database server required
-   - Check connection credentials in `config.py`
-   - Ensure database exists
-
-2. **Import Errors**
-   - Install all dependencies: `pip install -r requirements.txt`
-   - Check Python version compatibility
-
-3. **Port Already in Use**
-   - Change port in Streamlit configuration
-   - Kill existing processes using the port
-
-### Logs and Debugging
-- Check Streamlit console output for errors
-- Verify database connection status in Settings page
-- Use browser developer tools for frontend issues
-
 ## 📈 Performance Optimization
 
 - **Database Indexing**: Ensure proper indexes on frequently queried columns
@@ -246,34 +135,6 @@ The application uses a `.env` file for secure configuration. See `env_example.tx
 - **Session Management**: Secure session handling
 - **Role-based Access**: Admin and staff role separation
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Support
-
-For support and questions:
-
-- Create an issue in the repository
-- Check the troubleshooting section
-- Review the documentation
-
-## 🔄 Version History
-
-- **v1.0.0**: Initial release with core functionality
-- Complete CRUD operations for all entities
-- Real-time inventory tracking
-- Comprehensive reporting system
-- User authentication and authorization
-
 ## 🎉 Acknowledgments
 
 - Built with [Streamlit](https://streamlit.io/)
@@ -283,4 +144,3 @@ For support and questions:
 
 ---
 
-**Note**: This is a production-ready warehouse management system. Always backup your data before making significant changes, and test thoroughly in a development environment before deploying to production.
