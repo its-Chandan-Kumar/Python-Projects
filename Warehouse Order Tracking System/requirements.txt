@@ -1,0 +1,9 @@
+streamlit
+pandas
+plotly
+altair
+bcrypt
+python-dotenv
+openpyxl
+streamlit-option-menu
+cryptography

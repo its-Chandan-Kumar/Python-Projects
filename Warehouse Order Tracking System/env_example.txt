@@ -1,0 +1,14 @@
+# Database Configuration
+DB_HOST=127.0.0.1
+DB_USER=root
+DB_PASSWORD=1234567890
+DB_NAME=warehouse_tracking
+DB_PORT=3306
+
+# Encryption Key (change this in production)
+ENCRYPTION_KEY=warehouse-tracking-system-secret-key-change-in-production
+
+# Application Settings
+APP_TITLE=Warehouse Order Tracking System
+APP_ICON=📦
+DEBUG=False
